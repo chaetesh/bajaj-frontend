@@ -30,7 +30,10 @@ function App() {
         throw new Error("Invalid JSON format");
       }
       setError(null);
-      const result = await axios.post("http://localhost:3000/bfhl", jsonData);
+      const result = await axios.post(
+        "https://bajaj-backend-o3c0.onrender.com/bfhl",
+        jsonData
+      );
       setResponse(result.data);
     } catch (err) {
       setError(err.message);
