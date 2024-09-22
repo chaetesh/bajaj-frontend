@@ -31,7 +31,7 @@ function App() {
       }
       setError(null);
       const result = await axios.post(
-        "http://54.91.48.33:3000/bfhl",
+        "https://bajaj-backend-o3c0.onrender.com/bfhl",
         jsonData
       );
       setResponse(result.data);
