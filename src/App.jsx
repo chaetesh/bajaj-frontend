@@ -31,7 +31,7 @@ function App() {
       }
       setError(null);
       const result = await axios.post(
-        "54.91.48.33:3000/bfhl",
+        "http://54.91.48.33:3000/bfhl",
         jsonData
       );
       setResponse(result.data);
