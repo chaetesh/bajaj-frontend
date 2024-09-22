@@ -31,7 +31,7 @@ function App() {
       }
       setError(null);
       const result = await axios.post(
-        "https://bajaj-backend-o3c0.onrender.com/bfhl",
+        "54.91.48.33:3000/bfhl",
         jsonData
       );
       setResponse(result.data);
@@ -55,7 +55,7 @@ function App() {
     if (selectedOptions.includes("Numbers")) {
       filteredData.push(...numbers);
     }
-    if (selectedOptions.includes("Highest alphabet")) {
+    if (selectedOptions.includes("Highest Lowercase alphabet")) {
       filteredData.push(...highest_alphabet);
     }
     return (
@@ -105,8 +105,8 @@ function App() {
             >
               <Dropdown.Item eventKey="Alphabets">Alphabets</Dropdown.Item>
               <Dropdown.Item eventKey="Numbers">Numbers</Dropdown.Item>
-              <Dropdown.Item eventKey="Highest alphabet">
-                Highest alphabet
+              <Dropdown.Item eventKey="Highest Lowercase alphabet">
+                Highest Lowercase alphabet
               </Dropdown.Item>
             </DropdownButton>
             {renderResponse()}
