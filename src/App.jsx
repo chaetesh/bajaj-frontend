@@ -47,7 +47,7 @@ function App() {
 
   const renderResponse = () => {
     if (!response) return null;
-    const { numbers, alphabets, highest_alphabet } = response;
+    const { numbers, alphabets, highest_lowercase_alphabet } = response;
     const filteredData = [];
     if (selectedOptions.includes("Alphabets")) {
       filteredData.push(...alphabets);
@@ -56,7 +56,7 @@ function App() {
       filteredData.push(...numbers);
     }
     if (selectedOptions.includes("Highest Lowercase alphabet")) {
-      filteredData.push(...highest_alphabet);
+      filteredData.push(...highest_lowercase_alphabet);
     }
     return (
       <ListGroup>
